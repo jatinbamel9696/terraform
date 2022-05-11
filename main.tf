@@ -1,13 +1,16 @@
-resource "aws_s3_bucket" "bucket" {
-  bucket = "my-tf-aws-test-jb-bucket1"
+terraform {
+# Terraform version at the time of writing this post
+  required_version = ">= 0.12.24"
 
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
+  backend "s3" {
+    bucket = "awsnow.in"
+    key = "awsnow.in/terraform/backend.tfstate"
   }
+
 }
 
-resource "aws_s3_bucket_acl" "example" {
-  bucket = aws_s3_bucket.bucket.id
-  acl    = "private"
+provider "aws" {
+  region = "ap-south-1"
 }
+
+provider "random" {}
