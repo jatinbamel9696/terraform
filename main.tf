@@ -1,14 +1,9 @@
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-    }
-    random = {
-      source = "hashicorp/random"
-    }
-  }
-resource "aws_s3_bucket" "test" {
-  bucket = "my-jatinbamel-test-terraform"
+provider "aws" {
+  profile = "default"
+  region = "ap-south-1"
+}
+resource "aws_s3_bucket" "bucket" {
+  bucket = "my-tf-aws-test-jb-bucket1"
 
   tags = {
     Name        = "My bucket"
@@ -17,6 +12,6 @@ resource "aws_s3_bucket" "test" {
 }
 
 resource "aws_s3_bucket_acl" "example" {
-  bucket = aws_s3_bucket.test.id
+  bucket = aws_s3_bucket.bucket.id
   acl    = "private"
 }
