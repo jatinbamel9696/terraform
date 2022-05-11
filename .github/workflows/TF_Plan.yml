@@ -1,6 +1,7 @@
 name: "Terraform-Plan-Infra-Plan"
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - FeatureBranch1
