@@ -1,6 +1,7 @@
 name: "Terraform-Apply-Infra-Release"
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
