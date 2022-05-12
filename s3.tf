@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "bucket" {
   }
 }
 
-resource "aws_s3_bucket_acl" "bucket" {
+resource "aws_s3_bucket_acl" "s3-bucket" {
   bucket = aws_s3_bucket.bucket.id
   acl    = "private"
 }
