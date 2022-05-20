@@ -10,6 +10,7 @@ variable "tags" {
   default     = {
     project     = "test",
     environment = "dev"
+ }
 }
 
 variable "account_no" {
