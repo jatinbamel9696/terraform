@@ -14,7 +14,8 @@ variable "tags" {
 }
 
 variable "account_no" {
-  type = number
+  type    = number
+  default = "807601175206"
 }
 
 variable "region_code" {
