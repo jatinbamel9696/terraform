@@ -33,3 +33,9 @@ variable "availability_zones" {
   default     = []
 }
 
+variable "region_code" {
+  description = "The short code for region used for naming resources"
+  type        = string
+  default     = "9991609696"
+}
+
