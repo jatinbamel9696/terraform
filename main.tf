@@ -5,6 +5,6 @@ terraform {
     region = "ap-south-1"
   }
 }
-module "terraform_test_module" {
+module "terraform_vpc-and internet-gateway-module" {
  source  = "./vpc"
 }
