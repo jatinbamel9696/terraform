@@ -7,3 +7,4 @@ terraform {
 }
 module "terraform_test_module" {
  source  = "./vpc"
+}
