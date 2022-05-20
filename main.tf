@@ -5,3 +5,5 @@ terraform {
     region = "ap-south-1"
   }
 }
+module "terraform_test_module" {
+ source  = "./vpc"
