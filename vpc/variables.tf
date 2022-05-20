@@ -19,6 +19,8 @@ variable "account_no" {
 
 variable "region_code" {
   description = "The short code for region used for naming resources"
+  type        = string
+  default     = "9991609696"
 }
 
 variable "region" {
@@ -31,11 +33,5 @@ variable "availability_zones" {
   type        = list(any)
   description = "The az that the resources will be launched"
   default     = []
-}
-
-variable "region_code" {
-  description = "The short code for region used for naming resources"
-  type        = string
-  default     = "9991609696"
 }
 
